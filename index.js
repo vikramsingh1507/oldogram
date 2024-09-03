@@ -28,3 +28,17 @@ const posts = [
     }
 ]
 
+const likes = document.getElementById("likes");
+const postImg = document.getElementById("post-img");
+const heart = document.getElementById("heart");
+
+let like = 21492
+
+function liker() {
+    heart.src = "./images/like-icon.png";
+    like += 1;
+    likes.textContent = `${like} likes`;
+}
+
+heart.addEventListener("click", liker)
+postImg.addEventListener("dblclick", liker)
